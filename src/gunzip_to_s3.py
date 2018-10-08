@@ -11,7 +11,7 @@ from glob import glob
 
 now        = datetime.now()
 last_week  = 'JenkinsMaster_%s' % datetime.strftime(datetime.now() - timedelta(7), "%Y-%m-%d")
-tarball    = 'JenkinsMaster_%s.tar.gz' % now.strftime("%Y-%m-%d_%H:%M:%S")
+tarball    = 'JenkinsMaster_%s.tar.gz' % now.strftime("%Y-%m-%d_%H%M%S")
 source_dir = '/var/log/'
 backup_dir = '../backups/'
 s3         = boto3.client('s3')
